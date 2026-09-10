@@ -1,0 +1,9 @@
+name: hello
+on: 
+  push: {}
+  workflow_dispatch: {}
+jobs:
+  greet:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Running on $RUNNER_OS for $GITHUB_SHA (event $GITHUB_EVENT_NAME)"

@@ -4,5 +4,7 @@ jobs:
   label:
     runs-on: ubuntu-latest
     steps:
-      - run: |
-          echo "New issue: ${{ github.event.issue.title }}"
+      - env:
+          TITLE: ${{ github.event.issue.title }}
+        run: |
+          echo "New issue: $TITLE"

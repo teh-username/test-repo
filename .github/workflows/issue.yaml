@@ -1,0 +1,6 @@
+on: {issues: {types: [opened]}}
+jobs:
+  label:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "New issue: ${{ github.event.issue.title }}"

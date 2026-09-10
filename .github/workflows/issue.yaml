@@ -1,3 +1,4 @@
+name: issue
 on: {issues: {types: [opened]}}
 jobs:
   label:
